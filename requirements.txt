@@ -1,0 +1,8 @@
+langchain
+ipykernel
+python-dotenv
+langchain_groq
+beautifulsoup4
+langchain_community
+langchain_ollama
+chromadb
