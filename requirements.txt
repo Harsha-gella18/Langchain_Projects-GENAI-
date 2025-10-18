@@ -6,3 +6,8 @@ beautifulsoup4
 langchain_community
 langchain_ollama
 chromadb
+langchain_core
+fastapi
+uvicorn
+langserve
+sse_starlette 
