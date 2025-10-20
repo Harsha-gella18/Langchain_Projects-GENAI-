@@ -17,7 +17,12 @@ load_dotenv()
 
 # Load Groq API Key
 groq_api_key = os.getenv("GROQ_API_KEY")
-os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
+
+# Set up LangSmith tracing
+os.environ["LANGCHAIN_TRACING_V2"] = os.getenv("LANGSMITH_TRACING", "true")
+os.environ["LANGCHAIN_ENDPOINT"] = os.getenv("LANGSMITH_ENDPOINT", "https://api.smith.langchain.com")
+os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGSMITH_API_KEY", os.getenv("LANGCHAIN_API_KEY"))
+os.environ["LANGCHAIN_PROJECT"] = os.getenv("LANGSMITH_PROJECT", "pr-healthy-cynic-69")
 
 # Initialize LLM
 llm = ChatGroq(groq_api_key=groq_api_key, model="llama-3.1-8b-instant")

@@ -14,3 +14,5 @@ sse_starlette
 pypdf
 streamlit
 faiss-cpu
+arxiv
+wikipedia
